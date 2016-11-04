@@ -13,8 +13,8 @@ import retrofit2.http.POST;
 public interface TestService {
     //get请求用（Query）拼接参数
     //post用（Field）拼接参数id=1463129652953459
-    @FormUrlEncoded
+    @FormUrlEncoded//@FormUrlEncoded将会自动将请求参数的类型调整为application/x-www-form-urlencoded
     @POST("imageManage/findPicInfoByIdForAPP.action")
-    Call<String> addReviews(@Field("ph_id") String bookId
+    Call<String> getImageView(@Field("ph_id") String bookId
     );
 }
