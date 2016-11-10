@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     //创建一个retrofit实例
     private Retrofit createRetrofit() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://118.123.21.143/sheku/")
+                .baseUrl("http://119.6.204.196/")
                 .addConverterFactory(GsonConverterFactory.create())//用什么转换器来解析返回值
                 .build();
         return retrofit;
@@ -48,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
         userCall.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
-
+                Toast.makeText(MainActivity.this, "成功", Toast.LENGTH_LONG).show();
             }
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
-
+                Toast.makeText(MainActivity.this, "错误信息"+t.toString(), Toast.LENGTH_LONG).show();
             }
         });
     }
