@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.androidlee.R;
 import com.androidlee.api.TestService;
+import com.androidlee.model.User;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     //创建一个retrofit实例
     private Retrofit createRetrofit() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://119.6.204.196/")
+                .baseUrl("http://118.123.21.143/")
                 .addConverterFactory(GsonConverterFactory.create())//用什么转换器来解析返回值
                 .build();
         return retrofit;
@@ -44,15 +45,15 @@ public class MainActivity extends AppCompatActivity {
 
     //请求数据
     private void getData() {
-        Call<String> userCall = mTestService.getImageView("1463129652953459");
-        userCall.enqueue(new Callback<String>() {
+        Call<User> userCall = mTestService.getImageView("0","4");
+        userCall.enqueue(new Callback<User>() {
             @Override
-            public void onResponse(Call<String> call, Response<String> response) {
+            public void onResponse(Call<User> call, Response<User> response) {
                 Toast.makeText(MainActivity.this, "成功", Toast.LENGTH_LONG).show();
             }
 
             @Override
-            public void onFailure(Call<String> call, Throwable t) {
+            public void onFailure(Call<User> call, Throwable t) {
                 Toast.makeText(MainActivity.this, "错误信息"+t.toString(), Toast.LENGTH_LONG).show();
             }
         });
