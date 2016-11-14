@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //异常测试
-//                mtextView.setText("测试");
+                mtextView.setText("测试");
                 getData();
             }
         });

@@ -31,6 +31,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         Intent intent = new Intent(shekuApp,MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         shekuApp.startActivity(intent);
+        android.os.Process.killProcess(android.os.Process.myPid());
     }
 
     /**
