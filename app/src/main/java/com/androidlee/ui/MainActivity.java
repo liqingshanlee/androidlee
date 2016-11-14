@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //异常测试
-                mtextView.setText("测试");
+//                mtextView.setText("测试");
                 getData();
             }
         });
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     //创建一个retrofit实例
     private Retrofit createRetrofit() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://118.123.21.143/")
+                .baseUrl("http://www.sheku.org/")
                 .addConverterFactory(GsonConverterFactory.create())//用什么转换器来解析返回值
                 .build();
         return retrofit;
@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
     //请求数据
     private void getData() {
-        Call<User> userCall = mTestService.getImageView("0", "4");
+        String GroupData="1475063861162";
+        Call<User> userCall = mTestService.getImageView(GroupData,"open","111","shekju","哈哈哈","open");
         userCall.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {

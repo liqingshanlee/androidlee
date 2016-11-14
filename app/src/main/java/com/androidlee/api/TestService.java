@@ -16,7 +16,10 @@ public interface TestService {
     //get请求用（Query）拼接参数
     //post用（Field）拼接参数id=1463129652953459
     @FormUrlEncoded//@FormUrlEncoded将会自动将请求参数的类型调整为application/x-www-form-urlencoded
-    @POST("/appImg/sunningPhoneApp.action")
-    Call<User> getImageView(@Field("page") String weidu, @Field("pageRows") String type
+    @POST("/follow/createPhGroup.action")
+    Call<User> getImageView(@Field("groupId") String groupId, @Field("groupType") String groupType,
+                            @Field("groupOwner") String groupOwner,
+                            @Field("groupDesc") String groupDesc,
+                            @Field("groupName") String groupName, @Field("groupState") String groupState
     );
 }
