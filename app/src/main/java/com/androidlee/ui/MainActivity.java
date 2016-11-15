@@ -1,5 +1,6 @@
 package com.androidlee.ui;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,7 +19,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-    TextView mtest_retrofit, mtextView;
+    TextView mtest_retrofit, mtextView,rxjavaTextView;
     TestService mTestService;
 
     @Override
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mtest_retrofit = (TextView) findViewById(R.id.test_retrofit);
+        mtextView=(TextView)findViewById(R.id.test);
+        rxjavaTextView=(TextView)findViewById(R.id.test_rxjava);
         mTestService = createRetrofit().create(TestService.class);
         mtest_retrofit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
                 //异常测试
 //                mtextView.setText("测试");
                 getData();
+            }
+        });
+        rxjavaTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent();
+                intent.setClass(MainActivity.this,RxjavaActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -55,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<User> call, Response<User> response) {
                 Toast.makeText(MainActivity.this, "成功", Toast.LENGTH_LONG).show();
                 Log.e("test", response.body().toString());
+                mtextView.setText(response.body().msg);
             }
 
             @Override

@@ -23,4 +23,12 @@
         android:background="#00cc00"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
+    <TextView
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:background="#00cc00"
+        android:id="@+id/test_rxjava"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:text="跳转到第二页" />
 </LinearLayout>
