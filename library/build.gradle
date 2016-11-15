@@ -22,8 +22,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:22.2.1'
+    //rxjava依赖库
     compile 'io.reactivex:rxjava:1.1.6'
+    //retrofit依赖库
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0' //<span style="font-family: Arial, Helvetica, sans-serif;">这个是retrofit对gson的支持，可用gson的方式来解析json数据</span>
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0' //这个是retrofit对rxjava异步任务的扩展支持，
 }
