@@ -13,7 +13,17 @@ import java.util.List;
 public class User implements Parcelable {
    public String data;
    public String msg;
-   public boolean success;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "data='" + data + '\'' +
+                ", msg='" + msg + '\'' +
+                ", success=" + success +
+                '}';
+    }
+
+    public boolean success;
 
     @Override
     public int describeContents() {
