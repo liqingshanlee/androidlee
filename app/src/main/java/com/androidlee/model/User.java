@@ -11,7 +11,31 @@ import java.util.List;
  * 创建时间： 2016/11/11.
  */
 public class User implements Parcelable {
-   public String data;
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    public String data;
    public String msg;
 
     @Override

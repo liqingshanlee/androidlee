@@ -2,6 +2,8 @@ package com.androidlee.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
 
 import com.androidlee.R;
 
@@ -14,12 +16,21 @@ import rx.Subscriber;
  */
 
 public class RxjavaActivity extends AppCompatActivity {
+    TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rxjava);
+        mTextView = (TextView) findViewById(R.id.test_rxjava);
+        mTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
+            }
+        });
     }
+
     Observable observable = Observable.create(new Observable.OnSubscribe<String>() {
         @Override
         public void call(Subscriber<? super String> subscriber) {
