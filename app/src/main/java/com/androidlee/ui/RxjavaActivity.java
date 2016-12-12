@@ -2,8 +2,10 @@ package com.androidlee.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.androidlee.R;
 
@@ -26,18 +28,33 @@ public class RxjavaActivity extends AppCompatActivity {
         mTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                //被观察者被订阅
+                observable.subscribe(mySubscriber);
             }
         });
     }
 
+    //被观察者
     Observable observable = Observable.create(new Observable.OnSubscribe<String>() {
         @Override
-        public void call(Subscriber<? super String> subscriber) {
-            subscriber.onNext("Hello");
-            subscriber.onNext("Hi");
-            subscriber.onNext("Aloha");
-            subscriber.onCompleted();
+        public void call(Subscriber<? super String> s) {
+            s.onNext("Hello");
+            s.onCompleted();
         }
     });
+    //观察者
+    Subscriber<String> mySubscriber = new Subscriber<String>() {
+        @Override
+        public void onNext(String s) {
+            Log.e("test", s);
+        }
+
+        @Override
+        public void onCompleted() {
+        }
+
+        @Override
+        public void onError(Throwable e) {
+        }
+    };
 }
