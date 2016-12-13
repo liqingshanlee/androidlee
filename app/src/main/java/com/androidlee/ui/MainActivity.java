@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     //创建一个retrofit实例
     private Retrofit createRetrofit() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://www.sheku.org/")
+                .baseUrl("http://www.sheku/")
                 .addConverterFactory(GsonConverterFactory.create())//用什么转换器来解析返回值
                 .build();
         return retrofit;
