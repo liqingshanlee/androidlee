@@ -19,15 +19,22 @@
         </activity>
 
         <activity
-            android:screenOrientation="portrait"
             android:name=".ui.RxjavaActivity"
-            android:label="rxjava操作页面"
+            android:label="rxjava操作页面1"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity" />
         </activity>
-
+        <activity
+            android:name=".ui.RxjavaActivity1"
+            android:label="rxjava操作界面2"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

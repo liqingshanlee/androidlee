@@ -19,7 +19,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-    TextView mtest_retrofit, mtextView,rxjavaTextView;
+    TextView mtest_retrofit, mtextView, rxjavaTextView, rxjavaTextView1;
     TestService mTestService;
 
     @Override
@@ -27,8 +27,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mtest_retrofit = (TextView) findViewById(R.id.test_retrofit);
-        mtextView=(TextView)findViewById(R.id.test);
-        rxjavaTextView=(TextView)findViewById(R.id.test_rxjava);
+        mtextView = (TextView) findViewById(R.id.test);
+        rxjavaTextView = (TextView) findViewById(R.id.test_rxjava);
+        rxjavaTextView1 = (TextView) findViewById(R.id.test_rxjava1);
         mTestService = createRetrofit().create(TestService.class);
         mtest_retrofit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,9 +42,15 @@ public class MainActivity extends AppCompatActivity {
         rxjavaTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent();
-                intent.setClass(MainActivity.this,RxjavaActivity.class);
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, RxjavaActivity.class);
                 startActivity(intent);
+            }
+        });
+        rxjavaTextView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RxjavaActivity1.class));
             }
         });
     }
@@ -59,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
 
     //请求数据
     private void getData() {
-        String GroupData="1475063861162";
-        Call<User> userCall = mTestService.getImageView(GroupData,"open","111","shekju","哈哈哈","open");
+        String GroupData = "1475063861162";
+        Call<User> userCall = mTestService.getImageView(GroupData, "open", "111", "shekju", "哈哈哈", "open");
         userCall.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {

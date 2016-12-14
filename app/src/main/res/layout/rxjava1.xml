@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    tools:context="com.androidlee.ui.MainActivity">
+
+    <TextView
+        android:id="@+id/test_retrofit"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="#00cc00"
+        android:gravity="center"
+        android:text="发送rxjava操作" />
+</LinearLayout>
