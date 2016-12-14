@@ -7,7 +7,7 @@
     tools:context="com.androidlee.ui.MainActivity">
 
     <TextView
-        android:id="@+id/test_retrofit"
+        android:id="@+id/test_rxjava2"
         android:layout_width="match_parent"
         android:layout_height="40dip"
         android:background="#00cc00"
