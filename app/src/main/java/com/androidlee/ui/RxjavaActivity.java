@@ -5,12 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.androidlee.R;
 
 import rx.Observable;
-import rx.Subscriber;
 import rx.functions.Action1;
 
 /**

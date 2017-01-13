@@ -3,6 +3,7 @@ package com.androidlee.ui;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -19,7 +20,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-    TextView mtest_retrofit, mtextView, rxjavaTextView, rxjavaTextView1;
+    TextView mtest_retrofit, mtextView, rxjavaTextView, rxjavaTextView1, mrecyclerview;
     TestService mTestService;
 
     @Override
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         mtextView = (TextView) findViewById(R.id.test);
         rxjavaTextView = (TextView) findViewById(R.id.test_rxjava);
         rxjavaTextView1 = (TextView) findViewById(R.id.test_rxjava1);
+        mrecyclerview = (TextView) findViewById(R.id.recyclerview);
         mTestService = createRetrofit().create(TestService.class);
         mtest_retrofit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, RxjavaActivity1.class));
+            }
+        });
+        mrecyclerview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RecyclerviewActivity.class));
             }
         });
     }
