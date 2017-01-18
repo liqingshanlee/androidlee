@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.androidlee.R;
 
 import rx.Observable;
+import rx.Subscriber;
 import rx.functions.Action1;
 
 /**
@@ -34,36 +35,36 @@ public class RxjavaActivity extends AppCompatActivity {
     }
 
     //被观察者1
-//    Observable observable = Observable.create(new Observable.OnSubscribe<String>() {
-//        @Override
-//        public void call(Subscriber<? super String> s) {
-//            s.onNext("Hello");
-//            s.onCompleted();
-//        }
-//    });
-    //被观察者2
-    Observable<String> observable = Observable.just("Hello, world!");
-    //观察者1
-//    Subscriber<String> mySubscriber = new Subscriber<String>() {
-//        @Override
-//        public void onNext(String s) {
-//            Log.e("test", s);
-//        }
-//
-//        @Override
-//        public void onCompleted() {
-//            Log.e("test", "onCompleted");
-//        }
-//
-//        @Override
-//        public void onError(Throwable e) {
-//        }
-//    };
-    //观察者2
-    Action1<String> mySubscriber = new Action1<String>() {
+    Observable observable = Observable.create(new Observable.OnSubscribe<String>() {
         @Override
-        public void call(String s) {
+        public void call(Subscriber<? super String> s) {
+            s.onNext("Hello");
+            s.onCompleted();
+        }
+    });
+    //被观察者2
+//    Observable<String> observable = Observable.just("Hello, world!");
+    //观察者1
+    Subscriber<String> mySubscriber = new Subscriber<String>() {
+        @Override
+        public void onNext(String s) {
             Log.e("test", s);
         }
+
+        @Override
+        public void onCompleted() {
+            Log.e("test", "onCompleted");
+        }
+
+        @Override
+        public void onError(Throwable e) {
+        }
     };
+    //观察者2
+//    Action1<String> mySubscriber = new Action1<String>() {
+//        @Override
+//        public void call(String s) {
+//            Log.e("test", s);
+//        }
+//    };
 }
