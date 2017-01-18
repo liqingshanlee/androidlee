@@ -1,16 +1,57 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="32dp"
-    tools:context="com.androidlee.ui.MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ui.RxjavaActivity1">
 
-    <TextView
-        android:id="@+id/test_rxjava2"
+
+    <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:background="#00cc00"
-        android:gravity="center"
-        android:text="发送rxjava操作" />
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:onClick="createMethod"
+        android:text="create 方法" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="10dp"
+        android:onClick="createMethod2"
+        android:text="create 方法2" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_marginTop="10dp"
+        android:onClick="from"
+        android:text="from 方法" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button3"
+        android:layout_marginTop="10dp"
+        android:onClick="just"
+        android:text="just方法" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button4"
+        android:layout_marginTop="10dp"
+        android:onClick="filter"
+        android:text="filter 方法" />
+
+
+</RelativeLayout>
