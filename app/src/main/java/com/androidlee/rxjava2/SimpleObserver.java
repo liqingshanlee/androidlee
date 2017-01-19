@@ -1,4 +1,4 @@
-package com.androidlee.rxjava1;
+package com.androidlee.rxjava2;
 
 import java.util.Observable;
 import java.util.Observer;

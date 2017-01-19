@@ -31,7 +31,7 @@
         android:layout_marginTop="100dp"
         android:background="#00cc00"
         android:gravity="center"
-        android:text="跳转rxjava到第一页" />
+        android:text="跳转rxjava实用场景" />
 
     <TextView
         android:id="@+id/test_rxjava1"
@@ -40,7 +40,7 @@
         android:layout_marginTop="10dp"
         android:background="#00cc00"
         android:gravity="center"
-        android:text="跳转rxjava到第二页" />
+        android:text="跳转rxjava基本操作" />
 
     <TextView
         android:id="@+id/recyclerview"

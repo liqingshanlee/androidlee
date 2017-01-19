@@ -1,4 +1,4 @@
-package com.androidlee.rxjava1;
+package com.androidlee.rxjava2;
 
 /**
  * Created by luoliwen on 16/5/31.

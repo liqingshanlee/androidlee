@@ -4,10 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.androidlee.R;
-import com.androidlee.rxjava2.RxUtils;
+import com.androidlee.rxjava3.RxUtils;
 
 
 /**

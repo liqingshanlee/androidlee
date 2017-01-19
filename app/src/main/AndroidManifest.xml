@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.RxjavaActivity"
+            android:name=".rxjava4.RxjavaActivity"
             android:label="rxjava操作页面1"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
