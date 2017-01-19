@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".rxjava4.RxjavaActivity"
+            android:name=".rxjava4okhttp.RxjavaActivity"
             android:label="rxjava操作页面1"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
@@ -36,7 +36,7 @@
                 android:value=".ui.MainActivity" />
         </activity>
         <activity
-            android:name=".ui.RecyclerviewActivity"
+            android:name=".rxjava5okhttp.RxJavaOkhttpActivity"
             android:label="布局界面">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

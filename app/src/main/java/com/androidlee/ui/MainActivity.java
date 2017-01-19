@@ -11,7 +11,8 @@ import android.widget.Toast;
 import com.androidlee.R;
 import com.androidlee.api.TestService;
 import com.androidlee.model.User;
-import com.androidlee.rxjava4.RxjavaActivity;
+import com.androidlee.rxjava4okhttp.RxjavaActivity;
+import com.androidlee.rxjava5okhttp.RxJavaOkhttpActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         mrecyclerview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RecyclerviewActivity.class));
+                startActivity(new Intent(MainActivity.this, RxJavaOkhttpActivity.class));
             }
         });
     }

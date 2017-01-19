@@ -1,4 +1,4 @@
-package com.androidlee.rxjava4;
+package com.androidlee.rxjava4okhttp;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
