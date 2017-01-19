@@ -1,8 +1,8 @@
 ##liqingshan
 
-####学习百度搜索关键字：MVC+Rtrofit2+RxJava
+####学习百度搜索关键字：mvp+Rtrofit2+RxJava
 
-##平时集成的框架和自定义的一些控件
+##包含retrofit+okhttp+rxjava+rxandroid的初级使用和集成
 
 #结合rxjava观察者模式编程和retrofit网络请求的详细dome
 ####retrofit学习网址：http://www.tuicool.com/articles/AveimyQ
