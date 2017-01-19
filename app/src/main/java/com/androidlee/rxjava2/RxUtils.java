@@ -29,6 +29,7 @@ public class RxUtils {
                 if (!subscriber.isUnsubscribed()) {
                     subscriber.onNext("hello");
                     subscriber.onNext("hi");
+                    subscriber.onCompleted();
                     subscriber.onNext(downLoadJson());
                     subscriber.onNext("world");
                     subscriber.onCompleted();
