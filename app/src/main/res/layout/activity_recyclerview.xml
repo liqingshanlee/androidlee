@@ -12,7 +12,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="账号："
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
@@ -21,7 +20,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="密码："
         android:id="@+id/textView2"
         android:layout_marginTop="39dp"

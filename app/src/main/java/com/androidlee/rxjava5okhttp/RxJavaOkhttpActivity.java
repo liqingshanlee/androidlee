@@ -29,7 +29,7 @@ public class RxJavaOkhttpActivity extends AppCompatActivity {
     private ProgressDialog dialog;
     private LoginUtils utils;
 
-    private final String LOGIN = "http://192.168.72.196:8080/webproject/LoginAction";
+    private final String LOGIN = "http://192.168.18.254:8080/webproject/LoginAction";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
