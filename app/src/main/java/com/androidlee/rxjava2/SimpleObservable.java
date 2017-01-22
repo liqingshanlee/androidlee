@@ -22,7 +22,7 @@ public class SimpleObservable extends Observable {
         if (this.data != i) {
             this.data = i;
             this.url = "string" + i;
-            setChanged();//发生改变
+            setChanged();//调用咯setchanged就会触发observer接口的update(Observable observable, Object object)方法；
             notifyObservers();//通知观察者，表示状态发生改变
         }
     }
