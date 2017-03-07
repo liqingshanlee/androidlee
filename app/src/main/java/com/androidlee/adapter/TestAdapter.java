@@ -2,9 +2,12 @@ package com.androidlee.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.List;
+import com.androidlee.R;
+
 
 /**
  * 作者： 李青山
@@ -12,14 +15,19 @@ import java.util.List;
  */
 
 public class TestAdapter extends RecyclerView.Adapter {
+    private Context mContext;
+    private LayoutInflater mLayoutInflater;
 
-    public TestAdapter(Context context, List<String> data) {
-
+    public TestAdapter(Context context) {
+        this.mContext = context;
+        mLayoutInflater = LayoutInflater.from(context);
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+        View view = mLayoutInflater.inflate(R.layout.item_layout, null);
+        TestViewHolder mTestViewHolder = new TestViewHolder(view);
+        return mTestViewHolder;
     }
 
     @Override
@@ -29,6 +37,13 @@ public class TestAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return 10;
+    }
+
+    public class TestViewHolder extends RecyclerView.ViewHolder {
+
+        public TestViewHolder(View itemView) {
+            super(itemView);
+        }
     }
 }
