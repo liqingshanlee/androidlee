@@ -20,7 +20,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView mtest_retrofit, mtextView, rxjavaTextView, rxjavaTextView1, mrecyclerview;
     TestService mTestService;
 
@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         rxjavaTextView1 = (TextView) findViewById(R.id.test_rxjava1);
         mrecyclerview = (TextView) findViewById(R.id.recyclerview);
         mTestService = createRetrofit().create(TestService.class);
+        mrecyclerview.setOnClickListener(this);
+        findViewById(R.id.recyclerview_test).setOnClickListener(this);
         mtest_retrofit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,12 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, RxjavaActivity1.class));
             }
         });
-        mrecyclerview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RxJavaOkhttpActivity.class));
-            }
-        });
+
     }
 
     //创建一个retrofit实例
@@ -90,5 +87,19 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "错误信息" + t.toString(), Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            //跳转到RXjava操作界面
+            case R.id.recyclerview:
+                startActivity(new Intent(MainActivity.this, RxJavaOkhttpActivity.class));
+                break;
+            //跳转到侧滑删除界面
+            case R.id.recyclerview_test:
+                startActivity(new Intent(MainActivity.this, RecyclerviewDeleteActivity.class));
+                break;
+        }
     }
 }

@@ -7,47 +7,66 @@
     android:padding="32dp"
     tools:context="com.androidlee.ui.MainActivity">
 
-    <TextView
-        android:id="@+id/test_retrofit"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:background="#00cc00"
-        android:gravity="center"
-        android:text="发送retrofit请求" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/test"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="40dp"
-        android:background="#00cc00"
-        android:gravity="center"
-        android:text="显示数字" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/test_rxjava"
-        android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:layout_marginTop="100dp"
-        android:background="#00cc00"
-        android:gravity="center"
-        android:text="跳转rxjava实用场景" />
+            <TextView
+                android:id="@+id/test_retrofit"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:background="#3F51B5"
+                android:gravity="center"
+                android:text="发送retrofit请求" />
 
-    <TextView
-        android:id="@+id/test_rxjava1"
-        android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:layout_marginTop="10dp"
-        android:background="#00cc00"
-        android:gravity="center"
-        android:text="跳转rxjava基本操作" />
+            <TextView
+                android:id="@+id/test"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="#00cc00"
+                android:gravity="center"
+                android:text="显示数字" />
 
-    <TextView
-        android:id="@+id/recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="40dip"
-        android:layout_marginTop="10dp"
-        android:background="#00cc00"
-        android:gravity="center"
-        android:text="跳转recyclerview页面" />
+            <TextView
+                android:id="@+id/test_rxjava"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginTop="10dp"
+                android:background="#FF4081"
+                android:gravity="center"
+                android:text="跳转rxjava实用场景" />
+
+            <TextView
+                android:id="@+id/test_rxjava1"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginTop="10dp"
+                android:background="#FF4081"
+                android:gravity="center"
+                android:text="跳转rxjava基本操作" />
+
+            <TextView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginTop="10dp"
+                android:background="#FF4081"
+                android:gravity="center"
+                android:text="跳转rxjava2基本操作" />
+            <TextView
+                android:id="@+id/recyclerview_test"
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:layout_marginTop="10dp"
+                android:background="@color/gold"
+                android:gravity="center"
+                android:text="跳转rxjava2基本操作" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

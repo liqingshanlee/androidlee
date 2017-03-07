@@ -21,6 +21,7 @@
         <activity
             android:name=".rxjava4okhttp.RxjavaActivity"
             android:label="rxjava操作页面1"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
             <meta-data
@@ -38,6 +39,12 @@
         <activity
             android:name=".rxjava5okhttp.RxJavaOkhttpActivity"
             android:label="布局界面">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
+        </activity>
+        <activity android:name=".ui.RecyclerviewDeleteActivity"
+            android:label="侧滑删除界面">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity" />
