@@ -40,7 +40,7 @@
                 android:layout_marginTop="10dp"
                 android:background="#FF4081"
                 android:gravity="center"
-                android:text="跳转rxjava实用场景" />
+                android:text="跳转rxjava下载图片" />
 
             <TextView
                 android:id="@+id/test_rxjava1"
@@ -49,24 +49,25 @@
                 android:layout_marginTop="10dp"
                 android:background="#FF4081"
                 android:gravity="center"
-                android:text="跳转rxjava基本操作" />
+                android:text="跳转rxjava各种基本操作" />
 
             <TextView
                 android:id="@+id/recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="40dip"
                 android:layout_marginTop="10dp"
-                android:background="#FF4081"
+                android:background="@color/gold"
                 android:gravity="center"
-                android:text="跳转rxjava2基本操作" />
+                android:text="跳转rxjava2登录操作" />
             <TextView
                 android:id="@+id/recyclerview_test"
                 android:layout_width="match_parent"
                 android:layout_height="40dip"
                 android:layout_marginTop="10dp"
-                android:background="@color/gold"
+                android:background="@color/black"
+                android:textColor="@color/white"
                 android:gravity="center"
-                android:text="跳转rxjava2基本操作" />
+                android:text="跳转侧滑删除操作" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
